@@ -10,7 +10,7 @@ export default function Pokemon() {
     const {pokemon, loading} = usePokemon(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
     return (
-        <div className={style.container}>
+        <div className={style.container} data-testid="pokemonpage">
             <Link to="/" className={style.link}>Go back</Link>
              <div className={style.pokecontainer}>
              {loading ? <Loading/> : <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`} alt="Pokemon"/> }
