@@ -16,7 +16,7 @@ const usePokemon = (url) => {
           // handle error
           console.log("Could not retrieve data! Error:" + error);
         })
-    }, []);
+    }, [url]);
 
     return {pokemon, loading};
 }
