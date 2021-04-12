@@ -1,25 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import style from "../Styles/pokecard.module.css";
+import usePokemon from "../Hooks/usePokemon";
 import {Link} from "react-router-dom";
-import axios from "axios";
 import Loading from "../Components/Loading";
 
 export default function PokeCard({url, id}) {
-    const [pokemon, setPokemon] = useState({});
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        axios.get(url)
-        .then(function (response) {
-          // handle success
-          setLoading(false);
-          setPokemon(response.data);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log("Could not retrieve data! Error:" + error);
-        })
-      }, [url]); 
+    const {pokemon, loading} = usePokemon(url);
 
     return (
         <div className={style.card}>
