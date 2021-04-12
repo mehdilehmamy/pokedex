@@ -1,0 +1,32 @@
+.card {
+    cursor: pointer;
+    width: 30%;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: box-shadow .3s ease;
+}
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 50%;
+}
+
+.id {
+    display: inline-block;
+    background-color: rgba(192, 192, 192, 0.822);
+    border-radius: 30px;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 100%;
+    }
+   }

@@ -1,0 +1,12 @@
+.navbar {
+    padding: 1rem 2rem;
+    background-color:#f32727;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
